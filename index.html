@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ToDoList</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!---   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+-->
+    <style>
+        #background {
+            background-image: url("images/back1.png");
+            background-size: 60%;
+            margin-top: 100px;
+            margin-left: 600px;
+            background-repeat: no-repeat;
+        }
+        
+        .clearAll {
+            float: right;
+            display: none;
+        }
+        
+        .clearDone {
+            float: right;
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-primary" id="background" onload="fetchAllToDos()">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 mx-auto bg-light text-primary pb-2 rounded shadow p-3 bg-white rounded">
+                <h1 class="text-center">To Do List</h1>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Add Item">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="add-button">Add</button>
+                    </div>
+                </div>
+
+                <ul class="list-group list-group-flush">
+                    <!--
+                    <li class="list-group-item"><span class="bg-danger text-white">x</span><input type="checkbox" class="ml-2 mr-3" id="checkbox" />codeasylum</li>
+                    <li class="list-group-item"><span class="bg-danger text-white">x</span><input type="checkbox" class="ml-2 mr-3" id="checkbox"/>codeasylum</li>
+                    <li class="list-group-item"><span class="bg-danger text-white">x</span><input type="checkbox" class="ml-2 mr-3" id="checkbox"/>codeasylum</li>
+                    <li class="list-group-item"><span class="bg-danger text-white">x</span><input type="checkbox" class="ml-2 mr-3" id="checkbox"/>codeasylum</li>
+                -->
+                </ul>
+                <button type="button" class="btn btn-link clearAll shadow p-3 bg-white rounded">Clear All</button>
+                <button type="button" class="btn btn-link clearDone shadow p-3 bg-white rounded">Clear Done</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
